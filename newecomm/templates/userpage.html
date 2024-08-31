@@ -1,0 +1,304 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Titan </title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome for Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<style>
+/* Custom styles for the navbar */
+.navbar-brand img {
+    height: 20px;
+}
+.search-bar-container {
+    display: flex;
+    align-items: center;
+}
+.search-bar-container input {
+    width: 100%;
+}
+@media (min-width: 992px) {
+    .search-bar-container input {
+        width: 300px;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand">
+            <img src="/static/images/titanlogo.svg" alt="Titan Logo" height="20">
+        </a>
+
+        <!-- Toggle button for mobile view -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links, search, and icons -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Navbar Links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Search Bar -->
+            <form class="d-flex me-3 search-bar-container" action="/search?lang=en_IN" method="get">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+
+            <!-- Account and Cart Icons -->
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <!-- Account Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user"></i> Account
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                        <li><a class="dropdown-item" href="#">Wishlist</a></li>
+                        <li><a class="dropdown-item" href="#">eGift Cards</a></li>
+                        <li><a class="dropdown-item" href="#">Find A Store</a></li>
+                        <li><a class="dropdown-item" href="#">Help & Contact</a></li>
+                    </ul>
+                </li>
+
+                <!-- Cart Icon -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5 pt-5">
+    <div class="row mb-4">
+    </div> <!-- row.// -->
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                <!-- Thumbnail Card 1 -->
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="/static/images/watches/titan1.webp" class="card-img-top img-fluid" alt="Titan Neo Splash Watch">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <b>Titan Neo Splash Quartz Multifunction Black Dial Stainless Steel Strap Watch for Men</b>
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Men's Watch</span>
+                                <span><b>$90</b></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Thumbnail Card 2 -->
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="/static/images/watches/titan2.webp" class="card-img-top img-fluid" alt="Titan Celestor Watch">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <b>Titan Celestor Advanced GPS & Barometer 3.6 CM AMOLED Display with AOD, Piezoelectric Functional Crown Black Eclipse</b>
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Men's Watch</span>
+                                <span><b>$100</b></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Thumbnail Card 3 -->
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="/static/images/watches/titan3.webp" class="card-img-top img-fluid" alt="Raga Women's Watch">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <b>Raga Women's Charm: Elegant Mother of Pearl Dial with Ornate Strap Watch</b>
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Women's Watch</span>
+                                <span><b>$70</b></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Thumbnail Card 4 -->
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="/static/images/watches/titan5.webp" class="card-img-top img-fluid" alt="Titan Crest Watch">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <b>Titan Crest with 3.63 cm AMOLED Display with AOD, Functional Crown, BT Calling, Premium Smartwatch with Teal Strap</b>
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Men's Watch</span>
+                                <span><b>$50</b></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- row.// -->
+        </div> <!-- container.// -->
+    </div> <!-- album.// -->
+</div> <!-- container.// -->
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> {% endcomment %}
+
+
+{% extends "base.html" %}
+
+
+{% block body %}
+{% block start %}
+<div class="container mt-5 pt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-12">
+            <h2 class="text-center mb-4">Login</h2>
+            <form class="login-form" method='post' action='{% url ' login' %}'>
+                {% csrf_token %}
+                {% include "alert.html" %}
+                <!-- Email Input -->
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter email">
+                </div>
+
+                <!-- Password Input -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Password">
+                </div>
+
+                <!-- Remember Me Checkbox -->
+                <div class="form-check">
+                    <input type="checkbox" id="rememberMe" class="form-check-input">
+                    <label for="rememberMe" class="form-check-label">Remember me</label>
+                </div>
+
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+
+                <!-- Forgot Password Link -->
+                <div class="text-center mt-3">
+                    <a href="#" class="forgot-password">Forgot your password?</a>
+                </div>
+            </form>
+            <div class="mt-2 mb-2">
+                <a href="{% url 'register' %}"><button class="btn btn-primary">Create an Account</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* General Styles */
+    .container {
+        max-width: 500px;
+        padding: 15px;
+        margin: auto;
+    }
+
+    .login-form {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        transition: border-color 0.3s;
+    }
+
+    .form-control:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+    .form-check {
+        margin-bottom: 1rem;
+    }
+
+    .form-check-input {
+        margin-right: 0.5rem;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+    .forgot-password {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .forgot-password:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 576px) {
+        .container {
+            padding: 20px;
+        }
+
+        .login-form {
+            padding: 20px;
+        }
+    }
+</style>
+{% endblock %}
+{% endblock body %}
